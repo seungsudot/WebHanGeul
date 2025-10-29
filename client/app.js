@@ -55,7 +55,7 @@ function addMessage(sender, text) {
 
   if (sender === "bot") {
     const profile = document.createElement("img");
-    profile.src = "hangyeol.jpeg";
+    profile.src = "hangyeol.jpg";
     profile.classList.add("profile-img");
     msgDiv.appendChild(profile);
   }
@@ -67,5 +67,6 @@ function addMessage(sender, text) {
   chatBody.appendChild(msgDiv);
   chatBody.scrollTop = chatBody.scrollHeight;
 }
+
 
 
