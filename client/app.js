@@ -47,3 +47,24 @@ function addMessage(sender, text) {
   chatBody.appendChild(msgDiv);
   chatBody.scrollTop = chatBody.scrollHeight;
 }
+
+
+function addMessage(sender, text) {
+  const msgDiv = document.createElement("div");
+  msgDiv.classList.add("message", sender);
+
+  if (sender === "bot") {
+    const profile = document.createElement("img");
+    profile.src = "hangyeol.png";
+    profile.classList.add("profile-img");
+    msgDiv.appendChild(profile);
+  }
+
+  const msgText = document.createElement("span");
+  msgText.textContent = text;
+  msgDiv.appendChild(msgText);
+
+  chatBody.appendChild(msgDiv);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
